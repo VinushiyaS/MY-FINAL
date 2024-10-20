@@ -8,6 +8,7 @@ router.get('/', async (req, res) => {
     try {
         const subscriptions = await Subscription.find();
         res.json(subscriptions);
+        console.log(req)
     } catch (error) {
         res.status(500).json({ message: error.message });
     }
